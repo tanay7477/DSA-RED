@@ -1,0 +1,7 @@
+@"
+*.exe
+*.out
+*.o
+*.obj
+.vscode/
+"@ | Out-File -Encoding utf8 .gitignore
