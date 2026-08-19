@@ -1,0 +1,32 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+string  removeAdjacentDuplicates(string s){
+   string ans ="";
+    for(int i=0; i<s.size() ;i++){
+        char ch = s[i];
+        if(ans.empty()){
+            ans.push_back(ch);
+        }
+        else if(ch!=ans.back()){
+            ans.push_back(ch);
+
+        }
+        else{
+            ans.pop_back();
+        }
+    }
+    return ans;
+}
+
+int main()
+{
+    string str = "Babbar";
+    string ans = removeAdjacentDuplicates(str);
+    
+    for(int i =0 ; i<ans.size();i++){
+        cout<<ans[i]<<" ";
+    }
+
+}
